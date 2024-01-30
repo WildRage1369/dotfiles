@@ -28,7 +28,7 @@ return {
         "tomiis4/BufferTabs.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" }, -- optional
         lazy = false,
-        opts = { padding = 0, display = "column", horizontal = "right" },
+        opts = { padding = 0, display = "column", vertical = "bottom", horizontal = "right" },
         keys = {
             { "<Tab>", ":bnext<CR>", desc = "Go to next buffer" },
             { "<S-Tab>", ":bprev<CR>", desc = "Go to next buffer" },
@@ -106,6 +106,20 @@ return {
     {
         "stevearc/dressing.nvim",
         opts = {},
+    },
+    {
+        "otavioschwanck/arrow.nvim",
+        opts = {
+            show_icons = true,
+            leader_key = ";", -- Recommended to be a single key
+            save_key = function()
+                return "global"
+            end,
+        },
+        keys = { { ";", ";" } },
+    },
+    {
+        "jbyuki/nabla.nvim",
     },
     {
         "anuvyklack/pretty-fold.nvim",

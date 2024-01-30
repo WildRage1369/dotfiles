@@ -13,10 +13,10 @@ vim.opt.shiftwidth = 4
 -- vim.cmd [[highlight Headline1 guibg=#500e0b gui-bold]]
 -- vim.cmd [[highlight Headline2 guibg=#502305]]
 
-autocmd("VimResized", {
-    pattern = "*",
-    command = "tabdo wincmd =",
-})
+-- autocmd("VimResized", {
+--     pattern = "*",
+--     command = "tabdo wincmd =",
+-- })
 
 vim.api.nvim_create_user_command("CompileNeorgPDF", function(input)
     vim.api.nvim_command(":Neorg export to-file ~/Temporary/tmp.md")

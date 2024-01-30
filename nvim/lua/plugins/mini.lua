@@ -33,7 +33,12 @@ return {
         require("mini.sessions").setup({
             autoread = true,
         })
-        require("mini.pairs").setup({})
+        require("mini.pairs").setup({
+            mappings = {
+                ["$"] = { action = "open", pair = "$$", neigh_pattern = "[^\\]." },
+                ["$"] = { action = "close", pair = "$$", neigh_pattern = "[^\\]." },
+            },
+        })
 
         -- Change CWD to where cursor is located -----------------------
         local files_set_cwd = function(path)
@@ -76,6 +81,6 @@ return {
         -- end config ---------------------------------
     end,
     keys = {
-        { "<space>fm", ":lua MiniFiles.open()<CR>", desc = "Open mini.files file manager" },
+        { "<space>fd", ":lua MiniFiles.open()<CR>", desc = "Open mini.files file manager" },
     },
 }

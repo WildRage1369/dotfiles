@@ -1,0 +1,56 @@
+window:
+  dimensions:
+    columns: 100
+    lines: 50  
+  decorations: none
+  opacity: 0.95
+  title: Terminal
+live_config_reload: true
+font:
+  normal:
+    family: SauceCodePro Nerd Font Mono 
+    style: Regular
+  bold:
+    family: SauceCodePro Nerd Font Mono 
+    style: Bold 
+  italic:
+    family: SauceCodePro Nerd Font Mono
+    style: Italic 
+  offset:  
+    x: 0
+    y: 0 
+  # Colors (One Dark)
+colors:
+  # Default colors
+  primary:
+    background: '#1e2127'
+    foreground: '#abb2bf'
+
+  # Normal colors
+  normal:
+    black:   '#5c6370'
+    red:     '#e06c75'
+    green:   '#98c379'
+    yellow:  '#e5c07b'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#abb2bf'
+
+  # Bright colors
+  bright:
+    black:   '#5c6370'
+    red:     '#e06c75'
+    green:   '#98c379'
+    yellow:  '#e5c07b'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#ffffff'
+shell:
+  program: /usr/bin/fish
+env:
+  WINIT_X11_SCALE_FACTOR: "2.5"
+key_bindings: 
+  # Make <C-BS> work:
+  - { key: Back, mods: Control, chars: "\x17" }
